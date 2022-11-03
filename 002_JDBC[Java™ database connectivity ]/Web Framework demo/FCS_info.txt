@@ -1,0 +1,33 @@
+
+import your frontController app to your workspace
+refer the lib to your project/workspace buildpath : change your driver api according to your db / mysql/oracle
+
+
+
+Step 1:
+
+create table user_info(portalid int, name varchar(20), employeeId int, technology varchar(20), password varchar(20))
+
+
+
+----------------
+step 2:
+
+Change the properties in  context.xml file   in  meta-inf folder
+
+<Context>
+		<Resource name="jdbc/MyDB" auth="Container"
+		type="javax.sql.DataSource" maxActive="100" maxIdle="30"
+		maxWait="1000" username="root" password=""
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/mydb" />
+</Context>
+
+===============================================================================
+
+ Add the jarfiles (avoid 2 odbc files if yu are using mysql)
+
+---------------------------------------
+
+add mydql jar files to lib folder also... 
+
